@@ -1,1 +1,172 @@
-.....
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VORTEX | Trilha de Estudos Python</title>
+  <meta name="description" content="Trilha de estudos Python para desenvolvimento do VORTEX." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a33;
+      --text: #e6ebff;
+      --muted: #9aa7d1;
+      --primary: #6ea8fe;
+      --border: #253056;
+      --ok: #38d39f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1000px 500px at 10% -10%, #1a2450 0%, var(--bg) 45%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      padding-bottom: 28px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .step {
+      display: inline-block;
+      font-size: .78rem;
+      color: var(--ok);
+      border: 1px solid rgba(56,211,159,.35);
+      background: rgba(56,211,159,.08);
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #dfe8ff;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      padding: 18px 0;
+      font-size: .9rem;
+      margin-top: 12px;
+    }
+
+    .top-note {
+      margin-bottom: 18px;
+      color: var(--muted);
+      background: rgba(110,168,254,.08);
+      border: 1px solid rgba(110,168,254,.35);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">VORTEX</div>
+      <div class="subtitle">Roadmap de estudos para iniciar o projeto com Python + FastAPI</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="top-note">
+      Ordem recomendada para estudar e implementar no VORTEX:
+    </div>
+
+    <section class="grid">
+      <article class="card">
+        <span class="step">Etapa 1</span>
+        <h2>Fundamentos de Python</h2>
+        <p>Variáveis, funções, listas/dicts, módulos, venv e pip.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 2</span>
+        <h2>Estrutura de projeto</h2>
+        <p>Pastas, requirements.txt, .env, separação de rotas/lógica.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 3</span>
+        <h2>Framework web (FastAPI recomendado)</h2>
+        <p>Rotas (GET/POST), validação com Pydantic, status code.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 4</span>
+        <h2>Persistência de dados</h2>
+        <p>Comece com SQLite, depois SQLAlchemy e PostgreSQL.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 5</span>
+        <h2>Autenticação</h2>
+        <p>JWT, login, proteção de rotas.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 6</span>
+        <h2>Testes</h2>
+        <p>pytest + testes de rota.</p>
+      </article>
+
+      <article class="card">
+        <span class="step">Etapa 7</span>
+        <h2>Deploy</h2>
+        <p>Docker básico + deploy (Render/Railway/VPS).</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> VORTEX — Trilha de Evolução
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
